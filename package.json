@@ -1,0 +1,27 @@
+{
+  "name": "ynab-couple-sync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "start-prod": "node dist/index.js",
+    "build-docker-image": "docker build -t ynab-couple-sync .",
+    "run-docker-image": "docker run -it --rm --name ynab-couple-sync ynab-couple-sync"
+  },
+  "author": "Matteo Bucci",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "yargs": "^17.7.2",
+    "ynab": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/yargs": "^17.0.32"
+  }
+}
